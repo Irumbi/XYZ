@@ -133,3 +133,22 @@ button.cta-btn {
 button.cta-btn:hover {
     background-color: #3498DB; /* Slightly brighter blue */
 }
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    section#hero h1 {
+        font-size: 28px;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 10px;
+    }
+}

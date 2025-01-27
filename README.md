@@ -1,1 +1,261 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ GROUP - Insurance Website</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+            color: #2C3E50;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #2C3E50;
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;  /* Vertically align logo and text */
+            justify-content: flex-start; /* Align items to the left */
+        }
+
+        header img {
+            max-height: 60px;
+            background-color: #BDC3C7;
+            border-radius: 15px;
+            object-fit: contain;
+            margin-right: 15px; /* Space between logo and company name */
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        header .slogan {
+            margin-left: 10px; /* Adds spacing between the company name and slogan */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .cta-btn {
+            background-color: #2980B9;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background-color: #3498DB;
+        }
+
+        section {
+            display: none; /* Hide sections by default */
+            margin: 30px 0;
+        }
+
+        section h2 {
+            font-size: 24px;
+        }
+
+        .active {
+            display: block; /* Show active section */
+        }
+
+        #quote-form {
+            display: none; /* Initially hide the form */
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ECF0F1;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #BDC3C7;
+            border-radius: 4px;
+            background-color: #ffffff;
+        }
+
+        .thank-you-message {
+            display: none;
+            font-size: 18px;
+            color: green;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <img src="Logo.JPG" alt="Xyz Solutions Logo"> <!-- Add your logo image file here -->
+        <div class="header-left">
+            <h1>XYZ GROUP</h1>
+            <p class="slogan">(Building on the Past, Innovating Today, Shaping Tomorrow)</p>
+        </div>
+        <nav>
+            <a href="#" id="home-link" onclick="showSection('hero')">Home</a>
+            <a href="#" id="life-insurance-link" onclick="showSection('Life-Insurance')">Life Insurance</a>
+            <a href="#" id="investment-link" onclick="showSection('Investment')">Investment</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Protect your future with life, medical, investment, and general policies</h1>
+            <p>Secure your life and investment today with our trusted insurance plans.</p>
+            <button class="cta-btn" onclick="toggleQuoteForm('hero')">Get a quote now</button>
+        </div>
+        <div id="quote-form-hero" class="quote-form">
+            <form id="form-hero" onsubmit="submitForm(event, 'hero')">
+                <div>
+                    <label for="client-name-hero">Full Name:</label>
+                    <input type="text" id="client-name-hero" name="client-name" required>
+                </div>
+                <div>
+                    <label for="client-email-hero">Email Address:</label>
+                    <input type="email" id="client-email-hero" name="client-email" required>
+                </div>
+                <div>
+                    <label for="client-tel-hero">Telephone Number:</label>
+                    <input type="tel" id="client-tel-hero" name="client-tel" required>
+                </div>
+                <div>
+                    <button type="submit" class="cta-btn">Submit</button>
+                </div>
+            </form>
+            <div id="thank-you-message-hero" class="thank-you-message">Thank you! Your quote request has been submitted.</div>
+        </div>
+    </section>
+
+    <!-- Life Insurance Section -->
+    <section id="Life-Insurance">
+        <h2>Life Insurance</h2>
+        <p>Protect your family's future with a comprehensive life insurance policy.</p>
+        <button class="cta-btn" onclick="toggleQuoteForm('life-insurance')">Get a quote now</button>
+        <div id="quote-form-life-insurance" class="quote-form">
+            <form id="form-life-insurance" onsubmit="submitForm(event, 'life-insurance')">
+                <div>
+                    <label for="client-name-life-insurance">Full Name:</label>
+                    <input type="text" id="client-name-life-insurance" name="client-name" required>
+                </div>
+                <div>
+                    <label for="client-email-life-insurance">Email Address:</label>
+                    <input type="email" id="client-email-life-insurance" name="client-email" required>
+                </div>
+                <div>
+                    <label for="client-tel-life-insurance">Telephone Number:</label>
+                    <input type="tel" id="client-tel-life-insurance" name="client-tel" required>
+                </div>
+                <div>
+                    <button type="submit" class="cta-btn">Submit</button>
+                </div>
+            </form>
+            <div id="thank-you-message-life-insurance" class="thank-you-message">Thank you! Your quote request has been submitted.</div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="Investment">
+        <h2>Create Wealth</h2>
+        <p>Secure your future with our investment plans designed to build wealth over time.</p>
+        <button class="cta-btn" onclick="toggleQuoteForm('investment')">Get a quote now</button>
+        <div id="quote-form-investment" class="quote-form">
+            <form id="form-investment" onsubmit="submitForm(event, 'investment')">
+                <div>
+                    <label for="client-name-investment">Full Name:</label>
+                    <input type="text" id="client-name-investment" name="client-name" required>
+                </div>
+                <div>
+                    <label for="client-email-investment">Email Address:</label>
+                    <input type="email" id="client-email-investment" name="client-email" required>
+                </div>
+                <div>
+                    <label for="client-tel-investment">Telephone Number:</label>
+                    <input type="tel" id="client-tel-investment" name="client-tel" required>
+                </div>
+                <div>
+                    <button type="submit" class="cta-btn">Submit</button>
+                </div>
+            </form>
+            <div id="thank-you-message-investment" class="thank-you-message">Thank you! Your quote request has been submitted.</div>
+        </div>
+    </section>
+
+    <script>
+        // Function to show a specific section
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            var sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('active');
+        }
+
+        // Function to toggle the visibility of the quote form
+        function toggleQuoteForm(section) {
+            var formId = "quote-form-" + section;
+            var form = document.getElementById(formId);
+            if (form.style.display === "block") {
+                form.style.display = "none";
+            } else {
+                form.style.display = "block";
+            }
+        }
+
+        // Function to handle form submission
+        function submitForm(event, section) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            var thankYouMessageId = "thank-you-message-" + section;
+            var thankYouMessage = document.getElementById(thankYouMessageId);
+            var form = document.getElementById("form-" + section);
+
+            // Hide the form and show the thank you message
+            form.style.display = "none";
+            thankYouMessage.style.display = "block";
+        }
+
+        // Show the default section (home) on page load
+        window.onload = function() {
+            showSection('hero');
+        }
+    </script>
+
+</body>
+</html>

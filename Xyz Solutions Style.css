@@ -1,0 +1,135 @@
+/* Global styles for the page */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5; /* Light background */
+    color: #2C3E50;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    background: #2C3E50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-height: 60px; /* Adjust logo size */
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2980B9;
+}
+
+/* Hide sections by default */
+section {
+    display: none;
+}
+
+section.active {
+    display: block; /* Show only the active section */
+    transition: all 0.5s ease; /* Smooth transition */
+}
+
+/* Section styling */
+section#hero {
+    background: #BDC3C7; /* Soft gray for the past */
+    padding: 80px 0;
+    text-align: center;
+}
+
+section#hero h1 {
+    font-size: 40px;
+    color: #2C3E50;
+}
+
+section#hero p {
+    font-size: 18px;
+    color: #34495E;
+}
+
+section#Life-Insurance, section#Investment, section#quote-form {
+    padding: 60px;
+    text-align: center;
+    background: #ECF0F1; /* Light gray background */
+    margin-top: 20px;
+}
+
+section#Life-Insurance h2,
+section#Investment h2,
+section#quote-form h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section#quote-form {
+    background: #FFFFFF; /* Ensure the background is white for the form */
+    color: #2C3E50; /* Dark text for readability */
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ECF0F1; /* Light background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="Invs"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #BDC3C7; /* Light gray border */
+    border-radius: 4px;
+    background-color: #ffffff; /* White background for inputs */
+}
+
+button.cta-btn {
+    background-color: #2980B9; /* Corporate blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.cta-btn:hover {
+    background-color: #3498DB; /* Slightly brighter blue */
+}

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,13 +15,13 @@
 
     <!-- Header with Logo and Navigation -->
     <header>
-        <img src="file:///C:/Users/lenovo/Website%20XYZ%20Solutions%20Limited/Logo.png" alt="XYZ Solutions Logo"> <!-- Updated logo path -->
+        <img src="logo.png" alt="XYZ Solutions Logo"> <!-- Logo path is relative, assuming 'logo.png' is in the root -->
         <h1>XYZ Solutions Limited</h1>
         <nav>
-            <a href="#" id="home-link">Home</a>
-            <a href="#" id="life-insurance-link">Life Insurance</a>
-            <a href="#" id="investment-link">Investment</a>
-            <a href="#" id="quote-link">Get a Quote</a>
+            <a href="#hero" id="home-link">Home</a>
+            <a href="#Life-Insurance" id="life-insurance-link">Life Insurance</a>
+            <a href="#Investment" id="investment-link">Investment</a>
+            <a href="#quote-form" id="quote-link">Get a Quote</a>
         </nav>
     </header>
 
@@ -29,7 +30,6 @@
         <div class="hero-content">
             <h1>Bridging Your Past, Present, and Future With our Trusted Insurance Plans</h1>
             <p>Find the Perfect Policy: Life, Medical, General, and Investment Quotes in One Click.</p>
-
         </div>
     </section>
 
@@ -47,11 +47,10 @@
     
     <section id="Investment">
         <h2>Create Wealth</h2>
-       <!-- <p>Protect your family's future.</p> -->
         <label for="Investment options">Choose Investment Option:</label>
-        <select id="Investment options">
+        <select id="Investment-options">
             <option value="Investment">Money Max Plus(Jubilee)</option>
-            <option value="investment">Uniplan(Madison)</options>
+            <option value="investment">Uniplan(Madison)</option>
             <option value="Investment">Hekima(Britam)</option>
         </select>
     </section>
@@ -73,13 +72,14 @@
                 <label for="client-tel">Telephone Number:</label>
                 <input type="tel" id="client-tel" name="client-tel" required>
             </div>
+
             <div>
-                <label for="client-tel">Iam Interested on:</label> 
-        <select id="Investment options">
-            <option value="Investment">Education  Plan</option>
-            <option value="investment">Investment Plan</options>
-            <option value="Investment">Retirement Plan</option>
-        </select>
+                <label for="interest">I am Interested in:</label> 
+                <select id="interest" name="interest">
+                    <option value="Education Plan">Education Plan</option>
+                    <option value="Investment Plan">Investment Plan</option>
+                    <option value="Retirement Plan">Retirement Plan</option>
+                </select>
             </div>
 
             <div>
@@ -89,9 +89,6 @@
     </section>
 
     <!-- Link to JavaScript file -->
-    <script src=Script.js></script>
-    
-    
-
+    <script src="script.js"></script>
 </body>
 </html>
